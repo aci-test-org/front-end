@@ -3,6 +3,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { ApiService } from '../api.service';
+import { ReservationAction } from '../enum/reservation-action.enum';
 import { IReservationAction } from '../models/reservation-action.model';
 import { IReservationProduct } from '../models/reservation-product.model';
 
@@ -94,7 +95,7 @@ export class AppReservationActionPageComponent implements OnInit {
    * @param action number, 0 delete, 1 out, 2 in
    * @param id number the id of the reservation
    */
-  ReservationAction(actionNumber: number, id: number): void {
+  ReservationAction(actionNumber: ReservationAction, id: number): void {
     this.isLoading = true;
     const reservationAction: IReservationAction = { reservationId: id, action: actionNumber };
     if (id > -1) {
@@ -119,22 +120,22 @@ export class AppReservationActionPageComponent implements OnInit {
    * @param action number, 0 delete, 1 out, 2 in
    * @param id number the id of the reservation
    */
-  private updateReservation(action: number, id: number): void {
+  private updateReservation(action: ReservationAction, id: number): void {
     this.reservations.forEach(reservation => {
       if (reservation.id === id) {
         switch (action) {
-          case 0: {
+          case ReservationAction.Cancel: {
             const index = this.reservations.indexOf(reservation, 0);
             if (index > -1) {
               this.reservations.splice(index, 1);
             }
             break;
           }
-          case 1: {
+          case ReservationAction.Pickup: {
             reservation.pickedUpDate = new Date();
             break;
           }
-          case 2: {
+          case ReservationAction.Return: {
             reservation.returnDate = new Date();
             break;
           }
