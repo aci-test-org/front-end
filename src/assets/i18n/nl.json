@@ -154,8 +154,14 @@
       "CANCEL": "Annuleren",
       "LOADING": "Laden...",
       "ERROR": "Actie kan niet gedaan worden",
+      "NOT_FOUND": "Reservatie kan niet gevonden worden",
       "SUCCESS": "Reservering actie geluk",
-      "UNSUCCESSFUL": "Reservering actie is niet gelukt"
+      "UNSUCCESSFUL": "Reservering actie is niet gelukt",
+      "INVALID": {
+        "CALL": "Ongeldig aanroep",
+        "ID": "Ongeldig ID mee gegeven",
+        "ACTION": "Ongeldige actie op reservering"
+      }
     },
     "DATE": {
       "TERM": "Datum",

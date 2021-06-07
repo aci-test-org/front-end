@@ -94,15 +94,15 @@ export class AppReservationActionPageComponent implements OnInit {
    * @param action number, 0 delete, 1 out, 2 in
    * @param id number the id of the reservation
    */
-  ReservationAction(action: number, id: number): void {
+  ReservationAction(actionNumber: number, id: number): void {
     this.isLoading = true;
-    const reservationAction: IReservationAction = { reservationId: id, actionNumber: action };
+    const reservationAction: IReservationAction = { reservationId: id, action: actionNumber };
     if (id > -1) {
       this.apiService.reservationAction(reservationAction).subscribe({
         next: (resp) => {
           this.isLoading = false;
-          this.showErrorNotification('RESERVATION.ACTION.SUCCESS');
-          this.updateReservation(action, id);
+          this.showSuccessNotification('RESERVATION.ACTION.SUCCESS');
+          this.updateReservation(actionNumber, id);
         },
         error: (err) => {
           this.isLoading = false;
@@ -155,6 +155,12 @@ export class AppReservationActionPageComponent implements OnInit {
   private showErrorNotification(translatableMessage: string): void {
     this.snackbarService.open(this.translate.instant(translatableMessage), undefined, {
       panelClass: 'error-snack',
+      duration: 2500
+    });
+  }
+  private showSuccessNotification(translatableMessage: string): void {
+    this.snackbarService.open(this.translate.instant(translatableMessage), undefined, {
+      panelClass: 'success-snack',
       duration: 2500
     });
   }
