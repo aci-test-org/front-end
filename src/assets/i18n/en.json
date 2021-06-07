@@ -152,13 +152,19 @@
       "OUT": "Out",
       "RETURN": "Return",
       "CANCEL": "Cancel",
-      "LOADING": "Loading..."
+      "LOADING": "Loading...",
+      "ERROR": "Unable to do action on reservation",
+      "SUCCESS": "Reservation action success",
+      "UNSUCCESSFUL": "Reservation action was unsuccessful"
     },
     "DATE": {
       "TERM": "Date",
       "PICKUP": "Pickup",
       "RETURN": "Return"
     },
-    "LOCATION": "Location"
+    "LOCATION": "Location",
+    "NO_RESERVATIONS": "No reservations were found to be displayed",
+    "NO_RESPONSE_DATA": "Could not retrieve reservation data",
+    "NO_PRODUCT_DATA": "Could not retrieve product data"
   }
 }

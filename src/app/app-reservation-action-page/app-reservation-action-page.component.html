@@ -9,23 +9,23 @@
         <div *ngFor="let reservation of reservations" class="main-container-reservations">
             <mat-divider></mat-divider>
             <mat-card-content class="card-content">
-                <div class="itemBox-imgbox">
+                <div class="item-box-imgbox">
                     <img *ngIf="reservation.product?.image; else elseImageBlock" class="image-div"
                         src="data:image/png;base64,{{reservation.product?.image}}" #previewimage
-                        id="image-{{reservation.id}}">
+                        id="image-{{reservation.id}}" alt="{{reservation.product?.name}}">
                     <ng-template #elseImageBlock>
-                        <img class="image-div" src="/assets/images/no_image_found.png">
+                        <img class="image-div" src="/assets/images/no_image_found.png" alt="Not found">
                     </ng-template>
                 </div>
-                <div class="itemBox-middle">
-                    <div class="itemBox-description col">
+                <div class="item-box-middle">
+                    <div class="item-box-description col">
                         <div>{{reservation.product ? reservation.product.name : 'RESERVATION.ACTION.LOADING' |
                             translate}}</div>
                         {{ 'RESERVATION.LOCATION' | translate }}
                         {{ reservation.product ? reservation.product.inventoryLocation : 'RESERVATION.ACTION.LOADING' |
                         translate}}
                     </div>
-                    <div class="itemBox-reservation col">
+                    <div class="item-box-reservation col">
                         {{ 'RESERVATION.DATE.TERM' | translate }} {{reservation.startDate | date}} /
                         {{reservation.endDate | date}}
                     </div>
@@ -57,6 +57,12 @@
                 <mat-spinner *ngIf="isLoading" diameter="35" style="margin:auto; padding-bottom: 10px;"
                     name="reservation-loading-spinner"></mat-spinner>
             </mat-card-actions>
+        </div>
+        <!-- Show this when no reservations found -->
+        <div *ngIf="reservations.length < 1" style="text-align: center; margin-top: 10px;">
+            <mat-icon>sentiment_dissatisfied</mat-icon>
+            <br>
+            {{ 'RESERVATION.NO_RESERVATIONS' | translate }}
         </div>
     </mat-card>
     <div *ngIf="isLoadingPage">

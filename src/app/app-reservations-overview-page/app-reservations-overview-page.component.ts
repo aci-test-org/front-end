@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
 import { ApiService } from '../api.service';
 import { IProductFlat } from '../models/product-flat.model';
 import { IReservation } from '../models/reservation.model';
