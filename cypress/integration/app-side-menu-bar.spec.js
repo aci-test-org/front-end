@@ -15,7 +15,7 @@ describe('Side menu bar tests', () => {
     cy.get('div[name=menu-options-list]').contains('Reservation');
   });
 
-  it('Should show hello message in Dutch', () => {
+  it('Should show menu options in Dutch', () => {
     cy.changeLanguage('nl');
     cy.changeIsMenuOpened(true);
     cy.get('div[name=menu-options-list]').contains('Inventaris');
@@ -47,5 +47,11 @@ describe('Side menu bar tests', () => {
     cy.changeIsMenuOpened(true);
     cy.get('button[name=menu-option-reservations]').click();
     cy.url().should('include', 'reservations');
+  });
+
+  it('Should navigate to correct catalog url', () => {
+    cy.changeIsMenuOpened(true);
+    cy.get('button[name=menu-option-catalog]').click();
+    cy.url().should('include', 'catalog');
   });
 });
