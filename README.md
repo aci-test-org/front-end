@@ -1,4 +1,6 @@
 # ACIRental
+[![Build and test Angular web-application](https://github.com/SieBrum/aci-frontend/actions/workflows/build.yml/badge.svg)](https://github.com/SieBrum/aci-frontend/actions/workflows/build.yml)
+[![Publish new release to Docker hub](https://github.com/SieBrum/aci-frontend/actions/workflows/release.yml/badge.svg)](https://github.com/SieBrum/aci-frontend/actions/workflows/release.yml)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.2.
 
@@ -25,3 +27,6 @@ Run `npm run e2e` to execute the end-to-end tests via [Cypress](https://www.cypr
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+# Contributing and getting started
+Please refer to the [CONTRIBUTING.md](https://github.com/ACI-Rental/docs/blob/main/CONTRIBUTING.md) in the [docs repository](https://github.com/ACI-Rental/docs) for more information
