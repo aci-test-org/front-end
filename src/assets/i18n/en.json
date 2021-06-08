@@ -5,7 +5,8 @@
       "PRODUCTS": "Inventory",
       "CART": "Shopping cart",
       "CATALOG": "Catalog",
-      "RESERVATIONS": "Reservations"
+      "RESERVATIONS": "Reservations",
+      "RESERVATION": "Reservation"
     }
   },
   "CATALOG": {
@@ -144,5 +145,32 @@
     "LAST_PAGE": "Last Page",
     "RANGE_PAGE_LABEL_1": "0 of {{length}}",
     "RANGE_PAGE_LABEL_2": "{{startIndex}} - {{endIndex}} of {{length}}"
+  },
+  "RESERVATION": {
+    "ACTION": {
+      "TITLE": "Reservation actions",
+      "OUT": "Out",
+      "RETURN": "Return",
+      "CANCEL": "Cancel",
+      "LOADING": "Loading...",
+      "ERROR": "Unable to do action on reservation",
+      "NOT_FOUND": "Reservation could not be found",
+      "SUCCESS": "Reservation action success",
+      "UNSUCCESSFUL": "Reservation action was unsuccessful",
+      "INVALID": {
+        "CALL": "Invalid call",
+        "ID": "Invalid Id given",
+        "ACTION": "Invalid action on reservation"
+      }
+    },
+    "DATE": {
+      "TERM": "Date",
+      "PICKUP": "Pickup",
+      "RETURN": "Return"
+    },
+    "LOCATION": "Location",
+    "NO_RESERVATIONS": "No reservations were found to be displayed",
+    "NO_RESPONSE_DATA": "Could not retrieve reservation data",
+    "NO_PRODUCT_DATA": "Could not retrieve product data"
   }
 }
