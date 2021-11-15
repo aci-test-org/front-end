@@ -4,6 +4,13 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.2.
 
+## How To Start
+ * Install Node for npm tool: https://nodejs.org/en/download/
+ * Install Angular via npm: https://angular.io/cli
+ * npm install (lotsa warns)
+ * (start backend)
+ * npm start (see package.json)
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
